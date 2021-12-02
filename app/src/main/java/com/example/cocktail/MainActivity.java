@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String getCocktailName = et_cName.getText().toString();
-                String getCocktailSugar = et_cSugar.getText().toString();
-                String getCocktailAlcohol = et_cAlcohol.getText().toString();
+                int getCocktailSugar = Integer.parseInt(et_cSugar.getText().toString());
+                int getCocktailAlcohol = Integer.parseInt(et_cAlcohol.getText().toString());
                 String key = mDatabase.child("cocktails").push().getKey();
 
                 HashMap result = new HashMap<>();
@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 result.put("sugar", getCocktailSugar);
                 result.put("alcohol", getCocktailAlcohol);
 
-                writeNewCocktail(key, getCocktailName, getCocktailSugar, getCocktailAlcohol);
+                writeNewCocktail("Vodka", getCocktailName, getCocktailSugar, getCocktailAlcohol);
             }
         });
     }
     //새 칵테일 추가
-    public void writeNewCocktail(String cId, String cName, String cSugar, String cAlcohol){
+    public void writeNewCocktail(String cId, String cName, int cSugar, int cAlcohol){
         Cocktail cocktail = new Cocktail(cName, cSugar, cAlcohol);
 
         mDatabase.child("cocktails").child(cId).child(cName).setValue(cocktail);

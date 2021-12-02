@@ -3,38 +3,30 @@ package com.example.cocktail;
 public class Cocktail {
     public String cId;
     public String cName;
-    public String cSugar;
-    public String cAlcohol;
+    public int cSugar;
+    public int cAlcohol;
     public Cocktail(){
 
     }
-    public Cocktail(String cName, String cSugar, String cAlcohol){
+    public Cocktail(String cName, int cSugar, int cAlcohol){
         this.cName = cName;
         this.cSugar = cSugar;
         this.cAlcohol = cAlcohol;
     }
 
-    public String getcName() {
-        return cName;
-    }
-
-    public void setcName(String cName) {
-        this.cName = cName;
-    }
-
-    public String getcSugar() {
+    public int getcSugar() {
         return cSugar;
     }
 
-    public void setcSugar(String cSugar) {
+    public void setcSugar(int cSugar) {
         this.cSugar = cSugar;
     }
 
-    public String getcAlcohol() {
+    public int getcAlcohol() {
         return cAlcohol;
     }
 
-    public void setcAlcohol(String cAlcohol) {
+    public void setcAlcohol(int cAlcohol) {
         this.cAlcohol = cAlcohol;
     }
 
