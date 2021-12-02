@@ -1,4 +1,5 @@
-package com.example.cocktail;
+
+package com.example.cocktail.중간과정;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,8 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
-
-public class MainActivity extends AppCompatActivity {
+/*
+public class MainActivity extends AppCompatActivity{
     private DatabaseReference mDatabase;
     EditText et_cName, et_cSugar, et_cAlcohol;
     Button btn_addCocktail;
@@ -59,3 +60,4 @@ public class MainActivity extends AppCompatActivity {
         mDatabase.child("cocktails").child(cId).child(cName).setValue(cocktail);
     }
 }
+ */
