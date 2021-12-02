@@ -5,11 +5,9 @@ public class Cocktail {
     public String cName;
     public String cSugar;
     public String cAlcohol;
-
     public Cocktail(){
 
     }
-
     public Cocktail(String cName, String cSugar, String cAlcohol){
         this.cName = cName;
         this.cSugar = cSugar;
